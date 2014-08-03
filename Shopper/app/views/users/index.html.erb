@@ -1,2 +1,47 @@
-<h1>Users#index</h1>
+<!-- <h1>Users#index</h1>
 <p>Find me in app/views/users/index.html.erb</p>
+ -->
+ <table><strong><tr>
+	 			<td>
+	 			<strong>Email
+	 			</td>
+	 		
+	 				
+	 			<td>First Name</td>
+	 		
+	 				
+	 			<td>Last Name</td>
+	 		
+	 				
+	 			<td>User ID</td>
+	 		
+	 				
+	 			<td>Password
+	 			</td>
+	 		</tr></strong>
+
+	 		
+	</table>
+<% @users.each do |u| %>
+	 
+	 		
+
+	 		<tr>
+	 			<td>
+	 				<%= u.email %>
+	 			</td>
+	 		
+	 				
+	 			<td><%= u.fname %></td>
+	 		
+	 				
+	 			<td><%= u.lname %></td>
+	 		
+	 				
+	 			<td><%= u.id %></td>
+	 		
+	 				
+	 			<td><%= u.password %>
+	 			</td>
+	 		</tr>
+<% end %>
