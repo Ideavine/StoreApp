@@ -1,87 +1,13 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
 
-  get 'sessions/edit'
+  resources :users do 
+    resources :addresses
+    resources :orders do 
+      resources :products
+    end
+  end
 
-  get 'sessions/upate'
 
-  get 'sessions/destroy'
-
-  get 'sessions/show'
-
-  get 'sessions/index'
-
-  get 'sessions/new'
-
-  get 'home/create'
-
-  get 'home/edit'
-
-  get 'home/upate'
-
-  get 'home/destroy'
-
-  get 'home/show'
-
-  get 'home/index'
-
-  get 'home/new'
-
-  get 'addresses/create'
-
-  get 'addresses/edit'
-
-  get 'addresses/upate'
-
-  get 'addresses/destroy'
-
-  get 'addresses/show'
-
-  get 'addresses/index'
-
-  get 'addresses/new'
-
-  get 'transactions/create'
-
-  get 'transactions/edit'
-
-  get 'transactions/upate'
-
-  get 'transactions/destroy'
-
-  get 'transactions/show'
-
-  get 'transactions/index'
-
-  get 'transactions/new'
-
-  get 'products/create'
-
-  get 'products/edit'
-
-  get 'products/upate'
-
-  get 'products/destroy'
-
-  get 'products/show'
-
-  get 'products/index'
-
-  get 'products/new'
-
-  get 'users/index'
-
-  get 'users/show'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/update'
-
-  get 'users/delete'
-
-  get 'users/edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
